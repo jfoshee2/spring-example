@@ -1,6 +1,35 @@
 package com.example.spring.util;
 
-public class DBUtil {
+import com.example.spring.dao.IRowMapper;
+import com.example.spring.entity.Entity;
 
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DBUtil<T extends Entity> {
+
+    public List<T> getEntities(String sql, IRowMapper<T> rowMapper) throws ClassNotFoundException, SQLException {
+
+        Class.forName("org.postgresql.Driver");
+
+        String url = System.getenv("DB_URL");
+
+
+        Connection conn = DriverManager.getConnection(url);
+        Statement statement = conn.createStatement();
+
+        ResultSet resultSet = statement.executeQuery(sql);
+
+        List<T> result = new ArrayList<>();
+        while (resultSet.next()) {
+            result.add(rowMapper.mapRow(resultSet));
+        }
+
+        conn.close();
+        statement.close();
+
+        return result;
+    }
 
 }
