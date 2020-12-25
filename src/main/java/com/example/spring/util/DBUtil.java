@@ -2,11 +2,13 @@ package com.example.spring.util;
 
 import com.example.spring.dao.IRowMapper;
 import com.example.spring.entity.Entity;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class DBUtil<T extends Entity> {
 
     public List<T> getEntities(String sql, IRowMapper<T> rowMapper) throws ClassNotFoundException, SQLException {

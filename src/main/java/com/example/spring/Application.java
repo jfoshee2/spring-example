@@ -2,6 +2,8 @@ package com.example.spring;
 
 import java.util.Arrays;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
