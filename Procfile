@@ -1,1 +1,1 @@
-web: ./gradlew build && java -jar /build/libs/spring-example-1.0-SNAPSHOT.jar
+web: ./gradlew build && chmod 777 /build/libs/spring-example-1.0-SNAPSHOT.jar && java -jar /build/libs/spring-example-1.0-SNAPSHOT.jar
