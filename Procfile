@@ -1,0 +1,1 @@
+web: ./gradlew build && java -jar /build/libs/spring-example-1.0-SNAPSHOT.jar
