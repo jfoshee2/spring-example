@@ -9,11 +9,11 @@ function App() {
       <header className="App-header">
         <h1 className="login">Login</h1>
         <form>
-          <label className="fname">Username:</label>
-          <input type="text"></input>
+         
+          <input type="text" className="input" placeholder="Username"></input>
           <br></br>
-          <label className="password">Password:</label>
-          <input type="text"></input>
+          
+          <input type="text" className="input" placeholder="Password"></input>
         </form>
         <br></br>
         <button className="submit-button">Login</button>
