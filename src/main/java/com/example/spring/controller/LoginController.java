@@ -19,8 +19,8 @@ public class LoginController {
 
     @RequestMapping(method = RequestMethod.POST)
     public void createLogin(@RequestBody Login login) throws SQLException, ClassNotFoundException{
-        System.out.println(login.getUserName());
-        System.out.println(login.getPassWord());
+        System.out.println(login.getName());
+        System.out.println(login.getPassword());
     }
 }
 

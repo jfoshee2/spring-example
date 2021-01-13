@@ -1,30 +1,30 @@
 package com.example.spring.entity;
 
-public class Login {
+public class Login extends Entity {
 
 
-    private String userName;
-    private String passWord;
+    private String name;
+    private String password;
 
-
-    public Login(String userName, String passWord) {
-        this.userName = userName;
-        this.passWord = passWord;
-    }
-    public String getUserName() {
-        return userName;
+    public Login(String name, String password) {
+        this.name = name;
+        this.password = password;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getName() {
+        return name;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
 
